@@ -1,0 +1,57 @@
+@import "../css/utility/normalize.css";
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Mavenproregular;
+  src: url("../fonts/Mavenproregular.woff") format("woff"), url("../fonts/Mavenproregular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: Mavenpromedium;
+  src: url("../fonts/Mavenpromedium.woff") format("woff"), url("../fonts/Mavenpromedium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: Mavenprobold;
+  src: url("../fonts/Mavenprobold.woff") format("woff"), url("../fonts/Mavenprobold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: Mavenproblack;
+  src: url("../fonts/Mavenproblack.woff") format("woff"), url("../fonts/Mavenproblack.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: FontAwesome5Free-Solid;
+  src: url("../fonts/FontAwesome5Free-Solid.woff") format("woff"), url("../fonts/FontAwesome5Free-Solid.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: fallback;
+}
+
+/*# sourceMappingURL=main.css.map */
