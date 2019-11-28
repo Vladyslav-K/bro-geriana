@@ -1,0 +1,51 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.section {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+
+  @include sm {
+    height: initial;
+    font-size: 1.25rem;
+  }
+
+  &_main {
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+
+    @include sm {
+      height: initial;
+    }
+  }
+
+  &_specialists{
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+
+    @include md {
+      height: initial;
+    }
+  }
+
+  &_image {
+    height: 33.75rem;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include sm {
+      height: 60vw;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.search-caregiver {
+  width: 100%;
+  text-align: center;
+  background-color: #eff7f7;
+  padding: 1.25rem 0;
+
+  &__text {
+    @include text-styles(Mavenpromedium, 500, normal, 1.125rem, 2, black);
+  }
+
+  &__span {
+    @include text-styles(Mavenprobold, bold, normal, 1.125rem, 2, black);
+    color: #8ae2e2;
+    text-decoration: underline;
+  }
+}

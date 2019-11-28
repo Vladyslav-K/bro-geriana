@@ -1,0 +1,117 @@
+.footer {
+  display: flex;
+  align-items: center;
+  height: 320px;
+  padding-bottom: 15px;
+  background: #0b2a37;
+
+  @include md {
+    position: relative;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+
+  &__container {
+    flex: 1;
+    display: flex;
+
+    @include md {
+      width: 100%;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+
+    &_left {
+      @include md {
+        order: 2;
+        justify-content: center;
+      }
+    }
+
+    &_right {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+
+      @include md {
+        grid-template-columns: repeat(3, auto);
+        text-align: center;
+        order: 1;
+      }
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+
+    @include md {
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      margin-left: 0;
+    }
+  }
+
+  &__reserved {
+    @include text-styles(
+      Mavenproregular,
+      normal,
+      normal,
+      14px,
+      1.4,
+      rgba(255, 255, 255, 0.5)
+    );
+    margin-left: 5px;
+
+    @include md {
+      position: absolute;
+      bottom: 0;
+    }
+
+    @include sm {
+      font-size: 1rem;
+    }
+  }
+
+  &__title {
+    @include text-styles(Mavenprobold, bold, normal, 22px, 1.1, white);
+    margin-bottom: 40px;
+
+    @include md {
+      margin-bottom: 25px;
+    }
+
+    @include sm {
+      font-size: 1rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    margin-bottom: 13px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    @include text-styles(
+      Mavenproregular,
+      normal,
+      normal,
+      16px,
+      1,
+      rgba(255, 255, 255, 0.5)
+    );
+
+    @include sm {
+      font-size: 0.8rem;
+    }
+  }
+}

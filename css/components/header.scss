@@ -1,0 +1,92 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1440px;
+  padding: 1.25rem 1.875rem;
+  z-index: 111;
+
+  &__left {
+    display: flex;
+    align-items: center;
+
+    @include sm {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  &__right {
+    @extend .header__left;
+
+    @include md {
+      display: none;
+    }
+  }
+}
+
+.header-fixed {
+  background-color: white;
+  position: fixed;
+
+  @include sm {
+    height: 80px;
+  }
+
+  & .button {
+    color: #004d80;
+    border-color: #004d80;
+
+    &_help::before {
+      color: white;
+      background-color: #004d80;
+    }
+
+    &-main_phone {
+      color: white;
+      border-color: white;
+      background-color: #004d80;
+    }
+
+    @include sm {
+      color: white;
+      border-color: white;
+      background-color: #004d80;
+
+      &_help::before {
+        color: #004d80;
+        background-color: white;
+      }
+    }
+  }
+
+  & .logo {
+    background: url("../img/header-logo-fixed.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include sm {
+      position: absolute;
+      margin-bottom: 10px;
+      background-repeat: no-repeat;
+      background-size: 75%;
+      background-position: left top;
+    }
+  }
+
+  & .link {
+    color: #004d80;
+
+    &:last-child {
+      border: none;
+    }
+
+    @include md {
+      color: white;
+    }
+
+    &_burger::before {
+      background-image: url("../img/burger-black.svg");
+    }
+  }
+}

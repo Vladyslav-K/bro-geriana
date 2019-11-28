@@ -1,0 +1,66 @@
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0 50px 0;
+
+  @include sm {
+    padding: 40px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 33.33%;
+    padding: 30px;
+
+    @include sm {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    @include text-styles(Mavenproregular, normal, normal, 16px, 1.4, #0b2a37);
+    background-color: #eff7f7;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+
+    @include sm {
+      padding: 0;
+    }
+  }
+
+  &__content {
+    display: flex;
+  }
+
+  &__box {
+    text-align: end;
+    margin-right: 5px;
+  }
+
+  &__name {
+    @include text-styles(Mavenprobold, bold, normal, 16px, 26px, #0b2a37);
+    text-align: right;
+  }
+
+  &__status {
+    @include text-styles(Mavenproregular, normal, normal, 16px, 26px, #0b2a37);
+  }
+
+  &__image {
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

@@ -1,0 +1,155 @@
+.steps {
+  background-color: #66cfcf;
+  display: block;
+  box-sizing: inherit;
+  width: 100%;
+  max-width: 1440px;
+
+  h1 {
+    @include text-styles(Mavenproblack, 900, normal, 5vw, 1.2, white);
+    margin: 14px 0;
+
+    @include sm {
+      font-size: 2rem;
+    }
+  }
+
+  &__content {
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  &__title {
+    max-width: 35vw;
+
+    @include md {
+      text-align: center;
+      max-width: 50%;
+    }
+  }
+
+  &__map {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    padding: 50px 0;
+  }
+
+  &__search::before {
+    background-image: url("../img/search-icon.svg");
+  }
+
+  &__sand-clock::after {
+    background-image: url("../img/sand-clock-icon.svg");
+  }
+
+  &__cursor::before {
+    background-image: url("../img/mouse-cursor-icon.svg");
+  }
+
+  &__dollar::after {
+    background-image: url("../img/dollar-icon.svg");
+  }
+
+  
+
+  &__item {
+    margin: 20px auto;
+    width: 300px;
+    flex: 1 1 150px;
+    position: relative;
+
+    h3,
+    p {
+      margin: 14px 0;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    &:nth-child(odd)::after {
+      width: 280px;
+      height: 200px;
+      right: -70%;
+      top: 25px;
+    }
+
+    &:nth-child(even)::before {
+      transform: scaleX(-1);
+      height: 290px;
+      width: 300px;
+      left: -70%;
+      top: -10px;
+    }
+
+    &:nth-child(odd) {
+      padding-right: 40px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 40px;
+      text-align: right;
+    }
+
+    &:nth-child(odd)::before,
+    &:nth-child(even)::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      top: 0;
+      border: 3px dotted white;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include sm {
+        content: none;
+      }
+    }
+
+    &:nth-child(odd)::after,
+    &:nth-child(even)::before {
+      content: "";
+      position: absolute;
+      display: inline-block;
+      background: url("../img/connection-arrow-1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include sm {
+        content: none;
+      }
+    }
+
+    &:nth-child(odd)::before {
+      left: -70px;
+    }
+
+    &:nth-child(even)::after {
+      right: -70px;
+    }
+
+    &:last-child::before {
+      content: none !important;
+    }
+  }
+}
+
+.map {
+  &__title {
+    @include text-styles(Mavenprobold, bold, normal, 22px, 1.2, white);
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @include text-styles(Mavenproregular, normal, normal, 16px, 1.4, white);
+  }
+}

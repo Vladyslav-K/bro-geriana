@@ -1,0 +1,49 @@
+.menu {
+  height: 30px;
+  display: none;
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 1000000;
+
+  @include md {
+    top: 32px;
+    display: block;
+  }
+
+  @include sm {
+    top: 20px;
+    display: block;
+  }
+}
+
+.menu-active {
+  @include md {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgba(0, 77, 128, 0.8);
+    z-index: 1000;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center;
+    text-align: center;
+    width: 100vw !important;
+    height: 100%;
+  }
+
+  & .link {
+    font-size: 3rem !important;
+    margin: 0 0 3rem 0;
+    border: 0.125rem solid white !important;
+    border-radius: 0.625rem !important;
+
+    &:last-child::before {
+      display: none;
+    }
+
+    @include md {
+      width: 50vw;
+    }
+  }
+}

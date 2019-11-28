@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 414 153" width="414" height="153">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #eff7f7 } 
+	</style>
+	<g id="recalls">
+		<g id="recall-1">
+			<path id="Прямоугольник 1" class="shp0" d="M2 1L412 1L412 151L381.82 131L2 131L2 1Z" />
+		</g>
+	</g>
+</svg>
