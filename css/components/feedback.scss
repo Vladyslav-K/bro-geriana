@@ -5,9 +5,29 @@
   align-items: center;
   padding: 40px 0;
 
+  &__title {
+    @include text-styles(Mavenproblack, 900, normal, 2.5rem, 1.2, #0b2a37);
+    letter-spacing: -2px;
+  }
+
   &__text {
     @include text-styles(Mavenpromedium, 600, normal, 1rem, 1.4, #0b2a37);
     margin-bottom: 35px;
     letter-spacing: 1px;
+  }
+
+  &__button {
+    @include text-styles(Mavenprobold, bold, normal, 1rem, 2.2, #ffffff);
+
+    padding: 0px 0.9rem;
+
+    border: 2px solid #ffffff;
+    border-radius: 0.3rem;
+
+    text-transform: uppercase;
+
+    background-color: #ff6262;
+
+    cursor: pointer;
   }
 }

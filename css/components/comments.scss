@@ -20,13 +20,27 @@
     width: 33.33%;
     padding: 30px;
 
+    @include md {
+      width: 50%;
+    }
+
     @include sm {
       width: 100%;
     }
   }
 
+  &__title {
+    @include text-styles(Mavenproblack, 900, normal, 2.25rem, 6.25, #0b2a37);
+    text-align: center;
+    margin-bottom: 20px;
+
+    @include sm {
+      font-size: 1.5rem;
+    }
+  }
+
   &__text {
-    @include text-styles(Mavenproregular, normal, normal, 16px, 1.4, #0b2a37);
+    @include text-styles(Mavenproregular, normal, normal, 1rem, 1.4, #0b2a37);
     background-color: #eff7f7;
     padding: 25px 20px;
     margin-bottom: 25px;
@@ -46,12 +60,12 @@
   }
 
   &__name {
-    @include text-styles(Mavenprobold, bold, normal, 16px, 26px, #0b2a37);
+    @include text-styles(Mavenprobold, bold, normal, 1rem, 1.6, #0b2a37);
     text-align: right;
   }
 
   &__status {
-    @include text-styles(Mavenproregular, normal, normal, 16px, 26px, #0b2a37);
+    @include text-styles(Mavenproregular, normal, normal, 1rem, 1.6, #0b2a37);
   }
 
   &__image {

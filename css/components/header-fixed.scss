@@ -1,0 +1,103 @@
+.header-fixed {
+  & .header {
+    transition: 0.5s;
+
+    @include sm {
+      padding: 1.25rem 1.25rem;
+
+      color: white;
+
+      border-color: white;
+      background-color: #004d80;
+
+      &_help::before {
+        color: #004d80;
+
+        background-color: white;
+      }
+    }
+
+    &__button {
+      color: #004d80;
+      border-color: #004d80;
+
+      &_help {
+        display: flex;
+
+        &::before {
+          color: white;
+          background-color: #004d80;
+        }
+
+        @include md {
+          display: none;
+        }
+      }
+
+      &_call-us {
+        display: none;
+      }
+
+      &_phone {
+        display: block;
+        color: white;
+        border-color: white;
+        background-color: #004d80;
+
+        @include md {
+          display: none;
+        }
+      }
+    }
+
+    &__link {
+      color: #004d80;
+
+      &:last-child {
+        border: none;
+      }
+
+      @include lg {
+        color: white;
+        border-color: white;
+      }
+
+      &_burger {
+        & img {
+          filter: invert(1);
+        }
+      }
+    }
+
+    &__logo {
+      background: url("../img/header-logo-fixed.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: left 50%;
+
+      @include sm {
+        background-repeat: no-repeat;
+        background-size: 75%;
+      }
+    }
+  }
+
+  .menu {
+    &__button {
+      & span,
+      & span::before,
+      & span::after {
+        background-color: black;
+      }
+
+      &::after {
+        color: #004d80;
+      }
+    }
+
+    &__box {
+      top: 10vh;
+      height: 90vh;
+    }
+  }
+}

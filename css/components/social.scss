@@ -4,11 +4,11 @@
   margin: 0 0 15px 5px;
 
   @include md {
-    margin: 0;
+    margin: 2rem 0 0 0;
   }
 
   &__text {
-    @include text-styles(Mavenprobold, bold, normal, 22px, 1.1, white);
+    @include text-styles(Mavenprobold, bold, normal, 1.375rem, 1.1, white);
     margin-right: 10px;
 
     @include sm {

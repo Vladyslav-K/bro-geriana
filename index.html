@@ -1,42 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Geriana</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Geriana</title>
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
-
-<body>
-  <div class="container">
-
-    <main class="section section_main">
-      <div class="shade" style="background-image: url('./img/slide-shade.png')"></div>
-      <ul class="slide">
-        <li class="slide__image sliding" style="background-image:url('./img/slide-1.png')"></li>
-        <li class="slide__image" style="background-image:url('./img/slide-2.png')"></li>
-        <li class="slide__image" style="background-image:url('./img/slide-3.png')"></li>
-      </ul>
-      
-      <header class="header">     
-          <a href="tel:+48567365485" class="button button-main_phone">Call +48567365485</a>     
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="tel:+48567365485" class="header__button header__button_phone"
+          >Call +48567365485</a
+        >
         <div class="header__left">
-          <div class="logo"></div>
-          <button class="button button_help" id="help-center">help center</button>
-          <button class="button button_call-us">call us</button>
+          <div class="header__logo"></div>
+          <button class="header__button header__button_help">
+            help center
+          </button>
+          <button class="header__button header__button_call-us">call us</button>
         </div>
         <div class="header__right">
-          <a href="#" class="link">Sign Up</a>
-          <a href="#" class="link">Log in</a>
-          <a href="#" class="link link_burger">Menu</a>
+          <a href="#" class="header__link">Sign Up</a>
+          <a href="#" class="header__link">Log in</a>
+          <div class="menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__button" for="menu__toggle">
+              <span></span>       
+            </label>
+
+            <ul class="menu__box">
+              <li class="menu__item">Help center</li>
+              <li class="menu__item">Call us</li>
+              <li class="menu__item">Sign Up</li>
+              <li class="menu__item">Log in</li>
+            </ul>
+          </div>
         </div>
       </header>
-      <div class="main">
+
+      <main class="main">
+        <div
+          class="main__shade"
+          style="background-image: url('./img/shade.svg')"
+        ></div>
+        <div class="main__slide">
+          <div
+            class="main__slide main__slide_image"
+            style="background-image:url('./img/slide-1.png')"
+          ></div>
+          <div
+            class="main__slide main__slide_image"
+            style="background-image:url('./img/slide-2.png')"
+          ></div>
+          <div
+            class="main__slide main__slide_image"
+            style="background-image:url('./img/slide-3.png')"
+          ></div>
+        </div>
         <div class="main__container">
-          <h1 class="title title_main">
-            <span class="title_lg" style="color: #8ae2e2">
+          <h1 class="main__title">
+            <span class="main__title_lg">
               Znajdź opiekuna
             </span>
             <br />
@@ -44,312 +69,380 @@
           </h1>
           <p class="main__text">
             Skontaktuj się bezpośrednio z jedną z
-            <span style="color: #8ae2e2">60,000 zarejestrowanych</span>
+            <span class="main__text_blue">60,000 zarejestrowanych</span>
             <br />
-            opiekunek </p>
+            opiekunek
           </p>
-          <button class="button-main button-main_red">ZNAJDŹ OPIEKUNKĘ</button>
+          <button class="main__button">
+            ZNAJDŹ OPIEKUNKĘ
+          </button>
         </div>
-      </div>
-    </main>
+      </main>
 
-    <section class="search-caregiver">
-      <p class="search-caregiver__text">
-        Want to care with Geriana?
-        <span class="search-caregiver__span">Become a Caregiver</span>
-      </p>
-    </section>
+      <section class="search-caregiver">
+        <h2 class="search-caregiver__text">
+          Want to care with Geriana?
+          <span class="search-caregiver__span">Become a Caregiver</span>
+        </h2>
+      </section>
 
-    <article class="section section_specialists">
-      <section class="categories">
-        <h2 class="title title_specialists">Specjaliści Różnych Kategorii</h2>
-        <ul class="categories__list">
-          <li class="categories__item">
-            <div class="categories__image" style="background-image:url('./img/specialists-1.png')"></div>
-            <div class="categories__content">
-              <h6 class="categories__title">Opiekunowie z doświadczeniem</h6>
-              <p class="categories__text">
-                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z poszukującymi opieki
+      <section class="specialists">
+        <h2 class="specialists__title">Specjaliści Różnych Kategorii</h2>
+        <ul class="specialists__list">
+          <li class="specialists__item">
+            <div
+              class="specialists__image"
+              style="background-image:url('./img/specialists-1.png')"
+            ></div>
+            <div class="specialists__content">
+              <h6 class="specialists__title_small">
+                Opiekunowie z doświadczeniem
+              </h6>
+              <p class="specialists__text">
+                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z
+                poszukującymi opieki
               </p>
             </div>
           </li>
-          <li class="categories__item">
-            <div class="categories__image" style="background-image:url('./img/specialists-2.png')"></div>
-            <div class="categories__content">
-              <h6 class="categories__title">Masażyści</h6>
-              <p class="categories__text">
-                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z poszukującymi opieki
+          <li class="specialists__item">
+            <div
+              class="specialists__image"
+              style="background-image:url('./img/specialists-2.png')"
+            ></div>
+            <div class="specialists__content">
+              <h6 class="specialists__title_small">Masażyści</h6>
+              <p class="specialists__text">
+                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z
+                poszukującymi opieki
               </p>
             </div>
           </li>
-          <li class="categories__item">
-            <div class="categories__image" style="background-image:url('./img/specialists-3.png')"></div>
-            <div class="categories__content">
-              <h6 class="categories__title">Pielęgniarki i opiekunowie medyczni</h6>
-              <p class="categories__text">
-                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z poszukującymi opieki
+          <li class="specialists__item">
+            <div
+              class="specialists__image"
+              style="background-image:url('./img/specialists-3.png')"
+            ></div>
+            <div class="specialists__content">
+              <h6 class="specialists__title_small">
+                Pielęgniarki i opiekunowie medyczni
+              </h6>
+              <p class="specialists__text">
+                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z
+                poszukującymi opieki
               </p>
             </div>
           </li>
-          <li class="categories__item">
-            <div class="categories__image" style="background-image:url('./img/specialists-4.png')"></div>
-            <div class="categories__content">
-              <h6 class="categories__title">Fizjoterapeuci</h6>
-              <p class="categories__text">
-                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z poszukującymi opieki
+          <li class="specialists__item">
+            <div
+              class="specialists__image"
+              style="background-image:url('./img/specialists-4.png')"
+            ></div>
+            <div class="specialists__content">
+              <h6 class="specialists__title_small">Fizjoterapeuci</h6>
+              <p class="specialists__text">
+                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z
+                poszukującymi opieki
               </p>
             </div>
           </li>
         </ul>
       </section>
-    </article>
 
-    <section class="section section_image" style="background-image: url('./img/how-it-works-bg.png')"></section>
+      <img class="image" src="./img/how-it-works-bg.png" alt="how-it-works" />
 
-    <article class="steps">
-      <section class="steps__content">
-        <div class="steps__title">
-          <h1>Jak Działamy dla Poszukujących Opieki</h1>
-          <button class="button-main button-main_transparent">ZNAJDŹ OPIEKUNKĘ</button>
+      <section class="steps">
+        <div class="title steps__title">
+          <h2>Jak Działamy dla Poszukujących Opieki</h2>
+          <button class="steps__button">
+            ZNAJDŹ OPIEKUNKĘ
+          </button>
         </div>
-        <section class="steps__map">
+        <div class="steps__map">
           <div class="steps__item steps__search">
             <h3 class="map__title">Search a Caregiver</h3>
-            <p class="map__text">Ustalasz kryteria wyboru i wyszukujesz opiekuna z wymaganymi kwalifikacjami.</p>
+            <p class="map__text">
+              Ustalasz kryteria wyboru i wyszukujesz opiekuna z wymaganymi
+              kwalifikacjami.
+            </p>
           </div>
           <div class="steps__item steps__sand-clock">
             <h3 class="map__title">Select a Caregiver</h3>
-            <p class="map__text">Decydujesz na podstawie weryfikacji profilu i opinii inyych osób o danej opiekunce.
-              Nawiązujesz
-              współpracę z wybraną osobą.</p>
+            <p class="map__text">
+              Decydujesz na podstawie weryfikacji profilu i opinii inyych osób o
+              danej opiekunce. Nawiązujesz współpracę z wybraną osobą.
+            </p>
           </div>
           <div class="steps__item steps__cursor">
             <h3 class="map__title">Test Period</h3>
-            <p class="map__text">Opiekun rozpoczyna okres próbny i jeśli jesteście zadowoleni, zostaje na dłużej.</p>
+            <p class="map__text">
+              Opiekun rozpoczyna okres próbny i jeśli jesteście zadowoleni,
+              zostaje na dłużej.
+            </p>
           </div>
           <div class="steps__item steps__dollar">
             <h3 class="map__title">Pay after Start</h3>
-            <p class="map__text">Opiekun dostaje wynagrodzenie dopiero po rozpoczęciu pracy. Po zakonczeniu współpracy
-              wystawiasz
-              opiekunowi opinię.</p>
+            <p class="map__text">
+              Opiekun dostaje wynagrodzenie dopiero po rozpoczęciu pracy. Po
+              zakonczeniu współpracy wystawiasz opiekunowi opinię.
+            </p>
           </div>
-        </section>
+        </div>
       </section>
-    </article>
 
-    <section class="section section_image" style="background-image: url('./img/recalls-main.png')"></section>
+      <img class="image" src="./img/recalls-main.png" alt="recalls" />
 
-    <article class="section comments">
-      <h2 class="title title_comments">What do our Clients Say?</h2>
-      <ul class="comments__list">
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Moja mama zachorowała jakiś czas temu i nie jest już zupełnie samodzielna.
-            Sama przestalam dawac rade zajmowac sie wlasnym domem ..
-          </p>
-          <section class="comments__content">
-            <div class="comments_box">
-              <address class="comments__name">Aneta, 39l</address>
-              <span class="comments__status">Service provider</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-1.png')"></div>
-          </section>
-        </li>
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Jestem zadowolona z korzystania z portalu. Nic mnie to nie kosztuje,
-            a mam dostęp do ogłoszeń o pracy z Polski i zagraicy. Byłam już w pracy ..
-          </p>
-          <section class="comments__content">
-            <div class="comments__box">
-              <address class="comments__name">Katarzyna, 51 lat</address>
-              <span class="comments__status">Client</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-2.png')"></div>
-          </section>
-        </li>
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Moja mama zachorowała jakiś czas temu i nie jest już zupełnie samodzielna.
-            Sama przestalam dawac rade zajmowac sie wlasnym domem ..
-          </p>
-          <section class="comments__content">
-            <div class="comments_box">
-              <address class="comments__name">Aneta, 39l</address>
-              <span class="comments__status">Service provider</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-1.png')"></div>
-          </section>
-        </li>
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Moja mama zachorowała jakiś czas temu i nie jest już zupełnie samodzielna.
-            Sama przestalam dawac rade zajmowac sie wlasnym domem ..
-          </p>
-          <section class="comments__content">
-            <div class="comments_box">
-              <address class="comments__name">Aneta, 39l</address>
-              <span class="comments__status">Service provider</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-1.png')"></div>
-          </section>
-        </li>
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Jestem zadowolona z korzystania z portalu. Nic mnie to nie kosztuje,
-            a mam dostęp do ogłoszeń o pracy z Polski i zagraicy. Byłam już w pracy ..
-          </p>
-          <section class="comments__content">
-            <div class="comments__box">
-              <address class="comments__name">Katarzyna, 51 lat</address>
-              <span class="comments__status">Client</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-2.png')"></div>
-          </section>
-        </li>
-
-        <li class="comments__item">
-          <p class="comments__text">
-            Moja mama zachorowała jakiś czas temu i nie jest już zupełnie samodzielna.
-            Sama przestalam dawac rade zajmowac sie wlasnym domem ..
-          </p>
-          <section class="comments__content">
-            <div class="comments_box">
-              <address class="comments__name">Aneta, 39l</address>
-              <span class="comments__status">Service provider</span>
-            </div>
-            <div class="comments__image" style="background-image: url('./img/comment-avatar-1.png')"></div>
-          </section>
-        </li>
-
-      </ul>
-    </article>
-
-    <section class="section section_image" style="background-image: url('./img/our-preferences-main.png');"></section>
-
-    <article class="section why-best">
-      <section class="why-best__left">
-        <ul class="why-best__list">
-          <li class="why-best__item">
-            <p class="why-best__text">
-              10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z poszukującymi opieki
+      <article class="comments">
+        <h2 class="comments__title">What do our Clients Say?</h2>
+        <ul class="comments__list">
+          <li class="comments__item">
+            <p class="comments__text">
+              Moja mama zachorowała jakiś czas temu i nie jest już zupełnie
+              samodzielna. Sama przestalam dawac rade zajmowac sie wlasnym domem
+              ..
             </p>
+            <div class="comments__content">
+              <div class="comments_box">
+                <address class="comments__name">Aneta, 39l</address>
+                <span class="comments__status">Service provider</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-1.png')"
+              ></div>
+            </div>
           </li>
-          <li class="why-best__item">
-            <p class="why-best__text">
-              Gwarantujemy bezpieczeństwo przelewów pieniężnych oraz zapłatę za pracę, kontrakt reguluje współpracę.
+
+          <li class="comments__item">
+            <p class="comments__text">
+              Jestem zadowolona z korzystania z portalu. Nic mnie to nie
+              kosztuje, a mam dostęp do ogłoszeń o pracy z Polski i zagraicy.
+              Byłam już w pracy ..
             </p>
+            <div class="comments__content">
+              <div class="comments__box">
+                <address class="comments__name">Katarzyna, 51 lat</address>
+                <span class="comments__status">Client</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-2.png')"
+              ></div>
+            </div>
           </li>
-          <li class="why-best__item">
-            <p class="why-best__text">
-              Nie jesteśmy agencją. Nasza prowizja to jedynie
-              10% od ceny opieki pobierane od klienta. Dla opiekunek portal jest darmowy.
+
+          <li class="comments__item">
+            <p class="comments__text">
+              Moja mama zachorowała jakiś czas temu i nie jest już zupełnie
+              samodzielna. Sama przestalam dawac rade zajmowac sie wlasnym domem
+              ..
             </p>
+            <div class="comments__content">
+              <div class="comments_box">
+                <address class="comments__name">Aneta, 39l</address>
+                <span class="comments__status">Service provider</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-1.png')"
+              ></div>
+            </div>
           </li>
-          <li class="why-best__item">
-            <p class="why-best__text">
-              Samemu określasz długość płatnego okresu próbnego i okresu wypowiedzenia
+
+          <li class="comments__item">
+            <p class="comments__text">
+              Moja mama zachorowała jakiś czas temu i nie jest już zupełnie
+              samodzielna. Sama przestalam dawac rade zajmowac sie wlasnym domem
+              ..
             </p>
+            <div class="comments__content">
+              <div class="comments_box">
+                <address class="comments__name">Aneta, 39l</address>
+                <span class="comments__status">Service provider</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-1.png')"
+              ></div>
+            </div>
           </li>
-          <li class="why-best__item">
-            <p class="why-best__text">
-              Oferujemy usługi dodatkowe: ubezpieczenie i assistance 24h poprzez
-              konsultantów w Help Center oraz rabaty na kursy językowe i szkolenia opiekunów
+
+          <li class="comments__item">
+            <p class="comments__text">
+              Jestem zadowolona z korzystania z portalu. Nic mnie to nie
+              kosztuje, a mam dostęp do ogłoszeń o pracy z Polski i zagraicy.
+              Byłam już w pracy ..
             </p>
+            <div class="comments__content">
+              <div class="comments__box">
+                <address class="comments__name">Katarzyna, 51 lat</address>
+                <span class="comments__status">Client</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-2.png')"
+              ></div>
+            </div>
           </li>
-          <li class="why-best__item">
-            <p class="why-best__text">
-              Pewność kogo zatrudniasz: przeprowadzamy interview pod kątem jezyków obcych,
-              sprawdzamy referencje i ukończone dyplomy.Dodatkowo po każdej pracy wystawiane
-              są opinie,także wybierając opiekuna bazujesz na doświadczeniach innych z wybraną osobą.
+
+          <li class="comments__item">
+            <p class="comments__text">
+              Moja mama zachorowała jakiś czas temu i nie jest już zupełnie
+              samodzielna. Sama przestalam dawac rade zajmowac sie wlasnym domem
+              ..
             </p>
+            <div class="comments__content">
+              <div class="comments_box">
+                <address class="comments__name">Aneta, 39l</address>
+                <span class="comments__status">Service provider</span>
+              </div>
+              <div
+                class="comments__image"
+                style="background-image: url('./img/comment-avatar-1.png')"
+              ></div>
+            </div>
           </li>
         </ul>
-      </section>
+      </article>
 
-      <section class="why-best__right">
-        <section class="why-best__right-content">
-          <h2 class="title title_why-best">Nasze Mocne Strony</h2>
+      <img
+        class="image"
+        src="./img/our-preferences-main.png"
+        alt="our-preferences"
+      />
+
+      <section class="why-best">
+        <div class="why-best__left">
+          <ul class="why-best__list">
+            <li class="why-best__item">
+              <p class="why-best__text">
+                10,000 zarejestrowanych opiekunów czeka na bezpośredni kontakt z
+                poszukującymi opieki
+              </p>
+            </li>
+            <li class="why-best__item">
+              <p class="why-best__text">
+                Gwarantujemy bezpieczeństwo przelewów pieniężnych oraz zapłatę
+                za pracę, kontrakt reguluje współpracę.
+              </p>
+            </li>
+            <li class="why-best__item">
+              <p class="why-best__text">
+                Nie jesteśmy agencją. Nasza prowizja to jedynie 10% od ceny
+                opieki pobierane od klienta. Dla opiekunek portal jest darmowy.
+              </p>
+            </li>
+            <li class="why-best__item">
+              <p class="why-best__text">
+                Samemu określasz długość płatnego okresu próbnego i okresu
+                wypowiedzenia
+              </p>
+            </li>
+            <li class="why-best__item">
+              <p class="why-best__text">
+                Oferujemy usługi dodatkowe: ubezpieczenie i assistance 24h
+                poprzez konsultantów w Help Center oraz rabaty na kursy językowe
+                i szkolenia opiekunów
+              </p>
+            </li>
+            <li class="why-best__item">
+              <p class="why-best__text">
+                Pewność kogo zatrudniasz: przeprowadzamy interview pod kątem
+                jezyków obcych, sprawdzamy referencje i ukończone
+                dyplomy.Dodatkowo po każdej pracy wystawiane są opinie,także
+                wybierając opiekuna bazujesz na doświadczeniach innych z wybraną
+                osobą.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="why-best__right">
+          <h2 class="why-best__title">Nasze Mocne Strony</h2>
           <button class="why-best__button">ZNAJDŹ OPIEKUNKĘ</button>
-        </section>
+        </div>
       </section>
-    </article>
 
-    <article class="section feedback">
-      <h3 class="title title_feedback">Chcesz wiedziedzieć więcej? </h3>
-      <span class="feedback__text">Odwiedź nasze centrum pomocy lub zadzwon</span>
-      <a href="tel:+48567365485" class="button button_red">Call +48567365485</a>
-    </article>
+      <section class="feedback">
+        <h3 class="feedback__title">Chcesz wiedziedzieć więcej?</h3>
+        <span class="feedback__text"
+          >Odwiedź nasze centrum pomocy lub zadzwon</span
+        >
+        <a href="tel:+48567365485" class="feedback__button"
+          >Call +48567365485</a
+        >
+      </section>
 
-    <footer class="section footer">
-      <section class="footer__container footer__container_left">
-        <section class="footer__left">
-          <div class="logo logo_footer"></div>
-          <section class="social">
+      <footer class="footer">
+        <div class="footer__left">
+          <div class="footer__logo"></div>
+          <div class="social">
             <span class="social__text">Follow Us</span>
             <ul class="social__list">
-              <li class="social__item" style="background-image: url('./img/FB-icon.svg')"></li>
-              <li class="social__item" style="background-image: url('./img/TW-icon.svg')"></li>
-              <li class="social__item" style="background-image: url('./img/IN-icon.svg')"></li>
+              <li
+                class="social__item"
+                style="background-image: url('./img/FB-icon.svg')"
+              ></li>
+              <li
+                class="social__item"
+                style="background-image: url('./img/TW-icon.svg')"
+              ></li>
+              <li
+                class="social__item"
+                style="background-image: url('./img/IN-icon.svg')"
+              ></li>
             </ul>
-          </section>
-          <span class="footer__reserved">© 2018 Geriana. All rights reserved.</span>
-        </section>
-      </section>
+          </div>
+          <span class="footer__reserved"
+            >© 2018 Geriana. All rights reserved.</span
+          >
+        </div>
 
-      <section class="footer__container footer__container_right">
-        <section class="footer__box">
-          <h5 class="footer__title">O portalu</h5>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Kim jesteśmy</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">O nas w mediach</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Zasady i regulaminy</a>
-            </li>
-          </ul>
-        </section>
+        <div class="footer__right">
+          <div class="footer__box">
+            <h5 class="footer__title">O portalu</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Kim jesteśmy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">O nas w mediach</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Zasady i regulaminy</a>
+              </li>
+            </ul>
+          </div>
 
-        <section class="footer__box">
-          <h5 class="footer__title">Współpraca</h5>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Zostań naszym partnerem</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Praca</a>
-            </li>
-          </ul>
-        </section>
+          <div class="footer__box">
+            <h5 class="footer__title">Współpraca</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Zostań naszym partnerem</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Praca</a>
+              </li>
+            </ul>
+          </div>
 
-        <section class="footer__box">
-          <h5 class="footer__title">Centrum Pomocy</h5>
-          <ul class="footer__list">
-            <li class="footer__item">
-              <a href="#" class="footer__link">Opiekunowie</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Poszukujący opieki</a>
-            </li>
-            <li class="footer__item">
-              <a href="#" class="footer__link">Kontakt</a>
-            </li>
-          </ul>
-        </section>
-      </section>
-    </footer>
-  </div>
+          <div class="footer__box">
+            <h5 class="footer__title">Centrum Pomocy</h5>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Opiekunowie</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Poszukujący opieki</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
 
-  <img src="./img/burger-white.svg" alt="menu" class="menu">
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

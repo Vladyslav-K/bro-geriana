@@ -1,7 +1,13 @@
 .why-best {
   display: flex;
+  width: 100%;
+  max-width: 1440px;
   background-color: #005173;
   height: 870px;
+
+  @include md {
+    height: 100%;
+  }
 
   @include sm {
     flex-direction: column;
@@ -42,10 +48,17 @@
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: right 120%;
+    margin-left: 57px;
+
+    @include md {
+      margin-right: 25px;
+    }
 
     @include sm {
       order: 1;
       background-size: contain;
+      margin: auto;
+      align-items: center;
     }
   }
 
@@ -60,7 +73,7 @@
 
   &__item {
     position: relative;
-    margin-bottom: 35px;
+    margin: 35px 0;
 
     &::before {
       content: "";
@@ -73,20 +86,20 @@
     }
   }
 
-  &__text {
-    @include text-styles(Mavenproregular, normal, normal, 16px, 1.4, white);
+  &__title {
+    @include text-styles(Mavenproblack, 900, normal, 5rem, 1.2, #ffffff);
 
     @include sm {
-      font-size: 1.125rem;
+      font-size: 4rem;
+      padding-top: 1rem;
     }
   }
 
-  &__right-content {
-    margin-left: 57px;
-    margin-bottom: 30px;
+  &__text {
+    @include text-styles(Mavenproregular, normal, normal, 1rem, 1.4, white);
 
     @include sm {
-      margin: auto;
+      font-size: 1.125rem;
     }
   }
 }

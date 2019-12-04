@@ -1,92 +1,115 @@
 .header {
   display: flex;
   justify-content: space-between;
+  position: fixed;
   width: 100%;
   max-width: 1440px;
   padding: 1.25rem 1.875rem;
   z-index: 111;
+  transition: 0.5s;
 
   &__left {
     display: flex;
+
     align-items: center;
+    justify-content: center;
+
+    max-width: 90%;
 
     @include sm {
       flex-direction: column;
-      width: 100%;
     }
   }
 
   &__right {
     @extend .header__left;
+  }
 
-    @include md {
+  &__button {
+    @include text-styles(Mavenprobold, bold, normal, 1rem, 2.2, #ffffff);
+    padding: 0px 0.9rem;
+    border: 2px solid #ffffff;
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+
+    &_help {
+      display: flex;
+      align-items: center;
+      margin-right: 0.625em;
+
+      &::before {
+        content: "?";
+        width: 1rem;
+        height: 1rem;
+        color: #7a925e;
+        text-align: center;
+        background-color: #ffffff;
+        line-height: 1rem;
+        border-radius: 50%;
+        margin-right: 0.625rem;
+      }
+
+      @include md {
+        display: none;
+      }
+    }
+
+    &_call-us {
+      @include md {
+        display: none;
+      }
+    }
+
+    &_phone {
+      @include text-styles(Mavenprobold, bold, normal, 1rem, 1.4, #ffffff);
+      background: transparent;
+
+      border: none;
+      border-radius: 0.1rem;
+
       display: none;
-    }
-  }
-}
 
-.header-fixed {
-  background-color: white;
-  position: fixed;
+      position: fixed;
+      bottom: 1rem;
+      right: 10px;
+      padding: 0 0.6rem;
 
-  @include sm {
-    height: 80px;
-  }
-
-  & .button {
-    color: #004d80;
-    border-color: #004d80;
-
-    &_help::before {
-      color: white;
-      background-color: #004d80;
-    }
-
-    &-main_phone {
-      color: white;
-      border-color: white;
-      background-color: #004d80;
-    }
-
-    @include sm {
-      color: white;
-      border-color: white;
-      background-color: #004d80;
-
-      &_help::before {
-        color: #004d80;
-        background-color: white;
+      @include sm {
+        display: none;
       }
     }
   }
 
-  & .logo {
-    background: url("../img/header-logo-fixed.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+  &__link {
+    @include text-styles(Mavenproregular, normal, normal, 1rem, 2.2, #ffffff);
+    margin-right: 3rem;
 
-    @include sm {
-      position: absolute;
-      margin-bottom: 10px;
-      background-repeat: no-repeat;
-      background-size: 75%;
-      background-position: left top;
+    @include lg {
+      display: none;
+    }
+
+    &_small {
+      display: none;
     }
   }
 
-  & .link {
-    color: #004d80;
+  &__logo {
+    width: 270px;
+    height: 60px;
+    margin-right: 20px;
 
-    &:last-child {
-      border: none;
-    }
+    background: url("../img/header-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left 50%;
 
-    @include md {
-      color: white;
-    }
+    cursor: pointer;
 
-    &_burger::before {
-      background-image: url("../img/burger-black.svg");
+    @include sm {
+      background-size: 75%;
     }
   }
 }

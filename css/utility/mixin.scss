@@ -14,8 +14,20 @@
   color: $color;
 }
 
+@mixin over-size {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin lg {
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 980px) {
     @content;
   }
 }
