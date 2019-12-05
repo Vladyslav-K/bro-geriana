@@ -2,9 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 150px 0;
+
   width: 100%;
   max-width: 1440px;
+
+  margin: 150px 0;
 
   @include md {
     height: initial;
@@ -13,28 +15,33 @@
 
   &__title {
     @include text-styles(Mavenproblack, 900, normal, 2.375rem, 6.25, #0b2a37);
+
     margin-bottom: 70px;
 
     @include sm {
       font-size: 3rem;
       text-align: center;
-      margin-top: 30px;
       line-height: 2;
+
+      margin-top: 30px;
     }
 
     &_small {
       @include text-styles(Mavenprobold, bold, 700, 1.375rem, 1.6, #0b2a37);
+
       margin-bottom: 0px;
     }
   }
 
   &__list {
     display: flex;
-    text-align: center;
-    font-size: 1rem;
-    margin: 0 20px;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
+
+    font-size: 1rem;
+
+    margin: 0 20px;
   }
 
   &__item {
@@ -42,6 +49,7 @@
     flex: 1;
     flex-direction: column;
     align-items: center;
+
     max-width: 20%;
 
     &:last-child {
@@ -50,20 +58,22 @@
 
     @include lg {
       min-width: 50%;
+
       margin-bottom: 15%;
       padding: 0 15%;
     }
 
     @include md {
       min-width: 100%;
+
       margin-bottom: 15%;
       padding: 0 15%;
     }
   }
 
   &__content {
-    flex: 1;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -71,9 +81,11 @@
   &__image {
     width: 150px;
     height: 130px;
+
+    margin-bottom: 30px;
+
     background-position: center center;
     background-repeat: no-repeat;
-    margin-bottom: 30px;
 
     @include md {
       background-size: contain;

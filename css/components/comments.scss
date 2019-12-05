@@ -1,6 +1,7 @@
 .comments {
   display: flex;
   flex-direction: column;
+
   padding: 80px 0 50px 0;
 
   @include sm {
@@ -17,7 +18,9 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
+
     width: 33.33%;
+
     padding: 30px;
 
     @include md {
@@ -41,9 +44,11 @@
 
   &__text {
     @include text-styles(Mavenproregular, normal, normal, 1rem, 1.4, #0b2a37);
-    background-color: #eff7f7;
+
     padding: 25px 20px;
     margin-bottom: 25px;
+
+    background-color: #eff7f7;
 
     @include sm {
       padding: 0;
@@ -56,6 +61,7 @@
 
   &__box {
     text-align: end;
+
     margin-right: 5px;
   }
 
@@ -71,8 +77,11 @@
   &__image {
     width: 3.125rem;
     height: 3.125rem;
+
     border-radius: 50%;
+
     margin-left: 10px;
+
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

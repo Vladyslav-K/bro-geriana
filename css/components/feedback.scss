@@ -3,6 +3,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+
   padding: 40px 0;
 
   &__title {
@@ -12,8 +13,9 @@
 
   &__text {
     @include text-styles(Mavenpromedium, 600, normal, 1rem, 1.4, #0b2a37);
-    margin-bottom: 35px;
     letter-spacing: 1px;
+
+    margin-bottom: 35px;
   }
 
   &__button {

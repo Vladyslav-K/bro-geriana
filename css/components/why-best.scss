@@ -1,9 +1,11 @@
 .why-best {
   display: flex;
+
   width: 100%;
   max-width: 1440px;
-  background-color: #005173;
   height: 870px;
+
+  background-color: #005173;
 
   @include md {
     height: 100%;
@@ -12,18 +14,22 @@
   @include sm {
     flex-direction: column;
     text-align: center;
+
     height: 100%;
   }
 
   &__button {
     @include text-styles(Mavenprobold, bold, normal, 1.125rem, 1.4, #ffffff);
-    background: transparent;
-    padding: 1.25rem 2.8125rem;
     text-transform: uppercase;
-    border: 2px solid #ffffff;
-    border-radius: 0.35rem;
+
+    padding: 1.25rem 2.8125rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+
+    border: 2px solid #ffffff;
+    border-radius: 0.35rem;
+
+    background: transparent;
   }
 
   &__left {
@@ -43,12 +49,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+
     position: relative;
+    margin-left: 57px;
+
     background: #005173 url("../img/logo-background.png");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: right 120%;
-    margin-left: 57px;
 
     @include md {
       margin-right: 25px;
@@ -56,9 +64,11 @@
 
     @include sm {
       order: 1;
-      background-size: contain;
+
       margin: auto;
       align-items: center;
+
+      background-size: contain;
     }
   }
 
@@ -79,9 +89,11 @@
       content: "";
       display: block;
       position: absolute;
+
       top: -10px;
       width: 50px;
       height: 1px;
+
       background: #8ae2e2;
     }
   }
@@ -91,6 +103,7 @@
 
     @include sm {
       font-size: 4rem;
+
       padding-top: 1rem;
     }
   }

@@ -1,0 +1,189 @@
+.map {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 700px;
+
+  padding: 50px 0;
+
+  @include md {
+    max-width: 100vw;
+  }
+
+  @include sm {
+    align-items: center;
+  }
+
+  &__title {
+    @include text-styles(Mavenprobold, bold, normal, 1.375rem, 1.2, white);
+
+    margin-bottom: 15px;
+
+    @include md {
+      font-size: 1rem;
+    }
+  }
+
+  &__text {
+    @include text-styles(Mavenproregular, normal, normal, 1rem, 1.4, white);
+
+    @include md {
+      font-size: 0.75rem;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 1 1 150px;
+
+    width: 300px;
+
+    margin: 20px auto;
+
+    @include md {
+      flex: unset;
+
+      width: 15rem;
+      height: 17vw;
+
+      margin: auto;
+    }
+
+    @include sm {
+      margin: 1rem 1rem;
+    }
+
+    &_search::before {
+      background-image: url("../img/search-icon.svg");
+      background-size: 50%;
+    }
+
+    &_sand-clock::after {
+      background-image: url("../img/sand-clock-icon.svg");
+      background-size: 50%;
+    }
+
+    &_cursor::before {
+      background-image: url("../img/mouse-cursor-icon.svg");
+      background-size: 50%;
+    }
+
+    &_dollar::after {
+      background-image: url("../img/dollar-icon.svg");
+      background-size: 50%;
+    }
+
+    h3,
+    p {
+      margin: 14px 0;
+    }
+
+    p {
+      line-height: 1.3;
+    }
+
+    &:nth-child(odd)::before,
+    &:nth-child(even)::after {
+      content: "";
+      position: absolute;
+      display: inline-block;
+
+      width: 3.125rem;
+      height: 3.125rem;
+      top: 0;
+
+      border: 3px dotted white;
+      border-radius: 50%;
+
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @include sm {
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 1rem;
+      }
+    }
+
+    &:nth-child(odd)::after,
+    &:nth-child(even)::before {
+      content: "";
+      position: absolute;
+      display: block;
+
+      width: 16.875rem;
+      height: 12.5rem;
+      top: 1.7rem;
+
+      background: url("../img/connection-arrow-1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include md {
+        width: 22vw;
+        top: 2.5rem;
+      }
+
+      @include sm {
+        content: none;
+      }
+    }
+
+    &:nth-child(odd)::after {
+      left: 75%;
+
+      @include md {
+        left: 105%;
+      }
+    }
+
+    &:nth-child(even)::before {
+      transform: scaleX(-1);
+      width: 17rem;
+      right: 75%;
+
+      @include md {
+        width: 22vw;
+        right: 105%;
+      }
+    }
+
+    &:nth-child(odd) {
+      padding-right: 3rem;
+
+      @include md {
+        padding: 1rem 0;
+      }
+    }
+
+    &:nth-child(even) {
+      padding-left: 2.4rem;
+      text-align: right;
+
+      @include md {
+        padding: 1rem 0;
+      }
+    }
+
+    &:nth-child(odd)::before {
+      left: -70px;
+
+      @include sm {
+        left: -50px;
+      }
+    }
+
+    &:nth-child(even)::after {
+      right: -70px;
+
+      @include sm {
+        right: -50px;
+      }
+    }
+
+    &:last-child::before {
+      content: none !important;
+    }
+  }
+}

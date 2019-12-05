@@ -26,6 +26,7 @@
 
         &::before {
           color: white;
+
           background-color: #004d80;
         }
 
@@ -40,6 +41,7 @@
 
       &_phone {
         display: block;
+
         color: white;
         border-color: white;
         background-color: #004d80;
@@ -60,12 +62,6 @@
       @include lg {
         color: white;
         border-color: white;
-      }
-
-      &_burger {
-        & img {
-          filter: invert(1);
-        }
       }
     }
 
@@ -93,11 +89,6 @@
       &::after {
         color: #004d80;
       }
-    }
-
-    &__box {
-      top: 10vh;
-      height: 90vh;
     }
   }
 }

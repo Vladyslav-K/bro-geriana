@@ -2,10 +2,13 @@
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 111;
+
   width: 100%;
   max-width: 1440px;
+
   padding: 1.25rem 1.875rem;
-  z-index: 111;
+
   transition: 0.5s;
 
   &__left {
@@ -27,17 +30,22 @@
 
   &__button {
     @include text-styles(Mavenprobold, bold, normal, 1rem, 2.2, #ffffff);
+    text-transform: uppercase;
+
     padding: 0px 0.9rem;
+
     border: 2px solid #ffffff;
     border-radius: 0.3rem;
-    text-transform: uppercase;
+
     background: transparent;
+
     cursor: pointer;
     z-index: 2;
 
     &_help {
       display: flex;
       align-items: center;
+
       margin-right: 0.625em;
 
       &::before {
@@ -99,6 +107,7 @@
   &__logo {
     width: 270px;
     height: 60px;
+
     margin-right: 20px;
 
     background: url("../img/header-logo.png");
